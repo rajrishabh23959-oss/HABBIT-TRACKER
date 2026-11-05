@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "HabitGame",
+    "slug": "habitgame",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FFFFFF",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.habitgame.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "HabitGame uses your location to send smart reminders when you're near your habit locations (e.g., gym).",
+        "NSLocationAlwaysUsageDescription": "HabitGame uses your location to send smart reminders."
+      }
+    },
+    "android": {
+      "package": "com.habitgame.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-sharing",
+      "expo-notifications",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow HabitGame to use your location for smart habit reminders."
+        }
+      ]
+    ]
+  }
+}
